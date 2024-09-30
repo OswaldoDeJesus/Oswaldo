@@ -5,7 +5,11 @@ async function initMap() {
 
   map = new Map(document.getElementById("map"), {
     center: { lat: 21.814237222301667, lng: -102.76977000494668 },
-    zoom: 8,
+    zoom: 15,
+  });
+  new google.maps.Marker({
+    position: map.getCenter(),
+    map,
   });
 }
 initMap();
